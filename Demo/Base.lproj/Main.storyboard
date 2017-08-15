@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1611" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iEP-1B-xq4">
+                                <rect key="frame" x="96.5" y="77" width="182" height="30"/>
+                                <state key="normal" title="加载中...（在当前view上）"/>
+                                <connections>
+                                    <action selector="showLoading:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NqT-cj-ECn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJB-SW-fRh">
+                                <rect key="frame" x="141" y="253" width="93" height="30"/>
+                                <state key="normal" title="显示message"/>
+                                <connections>
+                                    <action selector="showMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vmb-ah-1JF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyM-XN-0Rt">
+                                <rect key="frame" x="156.5" y="115" width="62" height="30"/>
+                                <state key="normal" title="加载成功"/>
+                                <connections>
+                                    <action selector="showSuccess:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c6j-vv-a62"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S95-F7-cUK">
+                                <rect key="frame" x="156.5" y="153" width="62" height="30"/>
+                                <state key="normal" title="加载失败"/>
+                                <connections>
+                                    <action selector="showFail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dal-xY-rbu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ec-FK-UxN">
+                                <rect key="frame" x="172" y="191" width="31" height="30"/>
+                                <state key="normal" title="警告"/>
+                                <connections>
+                                    <action selector="showWarning:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uiT-6F-4wL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVA-DN-Int">
+                                <rect key="frame" x="171.5" y="223" width="31" height="30"/>
+                                <state key="normal" title="消失"/>
+                                <connections>
+                                    <action selector="hide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R3Z-mg-hwk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJv-rN-W9G">
+                                <rect key="frame" x="101" y="291" width="172" height="30"/>
+                                <state key="normal" title="加载中...（在window上）"/>
+                                <connections>
+                                    <action selector="showLoadingInWindow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pc5-mp-DnN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VVA-DN-Int" firstAttribute="top" secondItem="1Ec-FK-UxN" secondAttribute="bottom" constant="2" id="B2P-sp-cLF"/>
+                            <constraint firstItem="wJB-SW-fRh" firstAttribute="centerX" secondItem="iEP-1B-xq4" secondAttribute="centerX" id="IbW-lH-Ybf"/>
+                            <constraint firstItem="eyM-XN-0Rt" firstAttribute="centerX" secondItem="iEP-1B-xq4" secondAttribute="centerX" id="Mr0-fC-B5j"/>
+                            <constraint firstItem="iEP-1B-xq4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="57" id="S1h-wB-KgL"/>
+                            <constraint firstItem="iEP-1B-xq4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aon-Ew-18l"/>
+                            <constraint firstItem="1Ec-FK-UxN" firstAttribute="top" secondItem="S95-F7-cUK" secondAttribute="bottom" constant="8" id="d9y-p0-9lS"/>
+                            <constraint firstItem="S95-F7-cUK" firstAttribute="centerX" secondItem="iEP-1B-xq4" secondAttribute="centerX" id="dL7-LN-njQ"/>
+                            <constraint firstItem="kJv-rN-W9G" firstAttribute="top" secondItem="wJB-SW-fRh" secondAttribute="bottom" constant="8" id="gew-Am-D16"/>
+                            <constraint firstItem="eyM-XN-0Rt" firstAttribute="top" secondItem="iEP-1B-xq4" secondAttribute="bottom" constant="8" id="gqC-Fj-gZd"/>
+                            <constraint firstItem="kJv-rN-W9G" firstAttribute="centerX" secondItem="iEP-1B-xq4" secondAttribute="centerX" id="jvt-S0-uHh"/>
+                            <constraint firstItem="VVA-DN-Int" firstAttribute="centerX" secondItem="iEP-1B-xq4" secondAttribute="centerX" id="kwX-Jg-eXZ"/>
+                            <constraint firstItem="wJB-SW-fRh" firstAttribute="top" secondItem="VVA-DN-Int" secondAttribute="bottom" id="mDI-ZF-t6Y"/>
+                            <constraint firstItem="1Ec-FK-UxN" firstAttribute="centerX" secondItem="iEP-1B-xq4" secondAttribute="centerX" id="ta4-d7-1PA"/>
+                            <constraint firstItem="S95-F7-cUK" firstAttribute="top" secondItem="eyM-XN-0Rt" secondAttribute="bottom" constant="8" id="wqT-mx-zx1"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="254" y="63"/>
+        </scene>
+    </scenes>
+</document>
